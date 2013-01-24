@@ -1,0 +1,245 @@
+@import "settings"
+@import "compass/css3"
+@import "compass/css3"
+
+$icon-layout: smart
+@import "icon/*.png"
+
+//--------------------------------
+// Photoshop Drop Shadow
+//--------------------------------
+@mixin photoshop-drop-shadow ($angle: 120, $distance: 5px, $spread: 0, $size: 6px, $color: rgba(0,0,0,0.2), $inner: false) 
+  $angle: (180 - $angle) * pi() / 180
+  $h-shadow: round(cos($angle) * $distance)
+  $v-shadow: round(sin($angle) * $distance)
+  $css-spread: $size * $spread/100
+  $blur: ($size - $css-spread)
+  $inset: if($inner != false, 'inset', '')
+  @include box-shadow($h-shadow $v-shadow $blur $css-spread $color unquote($inset))
+
+body
+  background: transparent image-url('bg_grid.gif', false, true) center center repeat fixed
+
+header
+  width: 100%
+  height: 80px
+  background: transparent image-url('head-bg.png', false, true) center center repeat-x
+  color: white
+  div.logo
+    background: transparent image-url('bazgroszyt.pl-logo.png', false, true) left center no-repeat
+  h5
+    padding: 8px
+    float: right
+    font-size: 14px
+    font-weight: normal
+    color: white
+  a, a:focus, a:hover
+    float: left
+    color: white
+    font-size: 12px
+    line-height: 20px
+    padding: 4px
+    margin: 16px 0
+    img.lock
+      @include icon-sprite(lock-white)
+      height: icon-sprite-height(lock-white)
+      width: icon-sprite-width(lock-white)
+      position: relative
+      top: 3px
+    &.log
+      border-right: 1px solid rgba(57,57,57,0.2)
+    &.reg
+      border-left: 1px solid rgba(255,255,255,0.2)
+
+  #search
+    position: relative
+    padding: 16px 2px 
+    width: 185px
+    height: 60px
+    float: left
+    input
+      border-radius: 8px
+      background: rgba(102,51,102,0.4)
+      border-color: #663366
+      color: rgba(255,255,255,0.6)
+      height: 30px
+    span
+      @include border-top-right-radius(8px)
+      @include border-bottom-right-radius(8px)
+      background: rgba(102,51,102,0.6)
+      border-color: #663366
+      width: 20%
+      height: 30px
+      position: absolute
+      top: 16px
+      cursor: pointer
+      img.search
+        @include icon-sprite(search)
+        height: icon-sprite-height(search)
+        width: icon-sprite-width(search)
+        
+  a.social 
+    float: right
+    padding: 2px 0
+    .in
+      @include icon-sprite(in-small)
+      height: icon-sprite-height(in-small)
+      width: icon-sprite-width(in-small)
+    .gplus
+      @include icon-sprite(gplus-small)
+      height: icon-sprite-height(gplus-small)
+      width: icon-sprite-width(gplus-small)
+    .fb
+      @include icon-sprite(fb-small)
+      height: icon-sprite-height(fb-small)
+      width: icon-sprite-width(fb-small) 
+
+section.baner
+  .eight div
+    border: 1px solid rgba(0,0,0,0.1)
+    background: transparent image-url('baner-top.png', false, true) left center no-repeat
+    height: 334px
+    padding: 10px 20px
+    color: #7b588a
+    @include border-radius(10px, 10px)
+    @include photoshop-drop-shadow()
+    & > h1
+      color: #7b588a
+      font-size: 25px
+    & > p
+      width: 250px
+    & > ul
+      padding-left: 20px
+  .four > a
+    display: block
+    position: relative
+    margin-bottom: 18px
+    & > img
+      @include border-radius(10px, 10px)
+      @include photoshop-drop-shadow()
+    & > span
+      display: block
+      position: absolute
+      width: 100%
+      &.lock
+        top: 0px
+        height: 126px
+        background: transparent
+        border-bottom: 1px solid rgba(255,255,255, 0.4)
+        @include border-top-right-radius(10px)
+        @include border-top-left-radius(10px)
+        img
+          position: absolute
+          right: -10px
+          top: -8px
+          @include icon-sprite(lock-grean)
+          height: icon-sprite-height(lock-grean)
+          width: icon-sprite-width(lock-grean)
+      &.title
+        font-weight: bold
+        font-size: 14px
+        padding: 8px
+        color: white
+        bottom: 0px
+        height: 32px
+        background: rgba(115,81,121,1)
+        border-top: 1px solid rgba(0,0,0, 0.2)
+        @include border-bottom-right-radius(10px)
+        @include border-bottom-left-radius(10px)
+
+section.boxes
+  a.game
+    display: block
+    position: relative
+    margin-bottom: 18px
+    &.hide .lock
+      background: rgba(255,255,255,0.4)
+    & > img
+      @include border-radius(10px, 10px)
+      @include photoshop-drop-shadow()
+    & > span
+      display: block
+      position: absolute
+      width: 100%
+      &.lock
+        top: 0px
+        height: 103px
+        background: transparent
+        border-bottom: 1px solid rgba(255,255,255, 0.4)
+        @include border-top-right-radius(10px)
+        @include border-top-left-radius(10px)
+        img
+          position: absolute
+          right: -8px
+          top: -6px
+          &.lock-red
+            @include icon-sprite(lock-red)
+            height: icon-sprite-height(lock-red)
+            width: icon-sprite-width(lock-red)
+          &.lock-grean
+            @include icon-sprite(lock-grean)
+            height: icon-sprite-height(lock-grean)
+            width: icon-sprite-width(lock-grean)
+      &.title
+        font-weight: bold
+        font-size: 12px
+        line-height: 16px
+        padding: 10px 10px
+        text-align: center
+        color: white
+        bottom: 0px
+        height: 39px
+        background: rgba(115,81,121,1)
+        border-top: 1px solid rgba(0,0,0, 0.2)
+        @include border-bottom-right-radius(10px)
+        @include border-bottom-left-radius(10px)
+        &.low 
+          padding-top: 4px
+
+
+.row.payu
+  width: 500px
+  min-width: 500px
+  max-width: 500px
+  .columns a
+    display: block
+    @include border-radius(10px)
+    border: 1px solid #f5f5f5
+    background: #f5f5f5
+    text-align: center
+
+  h5
+    width: 80px
+    line-height: 40px
+    border: 1px solid #7a5787
+    background: #7a5787
+    @include border-radius(500px)
+    margin: 10px auto
+    padding-top: 35px
+    padding-bottom: 5px
+    position: relative
+    color: white
+    font-size: 14px
+    margin-bottom: 0
+    big
+      position: absolute
+      font-size: 3em
+      left: 0.65em
+      top: 0.2em
+    &.grean
+      border: 1px solid #57a21a
+      background: #57a21a
+    &.red
+      border: 1px solid #ec1616
+      background: #ec1616
+    &.orange
+      border: 1px solid #f19c00
+      background: #f19c00
+    
+
+  p
+    color: #7b588a
+    font-size: 24px
+    font-weight: bold
+    text-decoration: none
+    margin-bottom: 0

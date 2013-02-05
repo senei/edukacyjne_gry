@@ -1,17 +1,21 @@
-.icon-sprite, header a img.lock, header a:focus img.lock, header a:hover img.lock, header #search span img.search, header a.social .in, header a.social .gplus, header a.social .fb, section.baner .four > a > span.lock img, section.boxes a.game > span.lock img.lock-red, section.boxes a.game > span.lock img.lock-grean { background: url('../images/icon-se9a5cfd8ef.png') no-repeat; }
+.icon-sprite, header .top-bar ul a:not(.button) img.lock, header #search span img.search, header a.social .in, header a.social .gplus, header a.social .fb, section.baner .four > a > span.lock img, section.boxes a.game > span.lock img.lock-red, section.boxes a.game > span.lock img.lock-grean { background: url('../images/icon-se9a5cfd8ef.png') no-repeat; }
 
 body { background: transparent url('../images/bg_grid.gif?1358765219') center center repeat fixed; }
 
-header { width: 100%; height: 62px; background: transparent url('../images/head-bg.png?1358767219') center center repeat-x; color: white; }
-header div.logo { background: transparent url('../images/bazgroszyt.pl-logo.png?1358774522') left center no-repeat; }
-header h5 { padding: 8px; float: right; font-size: 15px; font-weight: normal; color: white; }
-header a, header a:focus, header a:hover { float: left; color: white; padding: 4px; margin: 16px 0; line-height: 20px; }
-header a img.lock, header a:focus img.lock, header a:hover img.lock { background-position: -12px 0; height: 15px; width: 13px; position: relative; top: 3px; }
-header a.log, header a:focus.log, header a:hover.log { border-right: 1px solid rgba(57, 57, 57, 0.2); }
-header a.reg, header a:focus.reg, header a:hover.reg { border-left: 1px solid rgba(255, 255, 255, 0.2); }
+header { width: 100%; }
+header .top-bar { line-height: 30px; min-height: 40px; margin: 10px 0; background: #72517f; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+header .top-bar ul { padding: 5px; line-height: 24px; height: 34px; }
+header .top-bar ul a:not(.button) { line-height: 30px; height: 30px; font-size: 12px; text-transform: uppercase; border-right: 1px solid #563d60; border-left: 1px solid #8e669d; }
+header .top-bar ul a:not(.button) img.lock { background-position: -12px 0; height: 15px; width: 13px; position: relative; top: 3px; }
+header .top-bar ul a:not(.button).log { border: none; border-right: 1px solid #563d60; }
+header .top-bar ul a:not(.button).reg { border: none; border-left: 1px solid #8e669d; }
+header .top-bar ul > li:not(.name):hover, header .top-bar ul > li:not(.name).active { background: #a585b1; color: #72517f; }
+header .top-bar ul > li:not(.name):hover a, header .top-bar ul > li:not(.name).active a { color: #72517f; }
+header .top-bar ul > li:first-child a, header .top-bar ul > li.active:first-child a { border-left: none; }
+header .top-bar ul > li:last-child a, header .top-bar ul > li.active:last-child a { border-right: none; }
 header #search { position: relative; padding: 16px 2px; width: 185px; height: 60px; float: left; }
 header #search input { border-radius: 8px; background: rgba(102, 51, 102, 0.4); border-color: #663366; color: rgba(255, 255, 255, 0.6); height: 30px; }
-header #search span { -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; border-bottom-right-radius: 8px; background: rgba(102, 51, 102, 0.6); border-color: #663366; width: 20%; height: 30px; position: absolute; top: 16px; cursor: pointer; z-index: 0px}
+header #search span { -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; border-bottom-right-radius: 8px; background: rgba(102, 51, 102, 0.6); border-color: #663366; width: 20%; height: 30px; position: absolute; top: 16px; cursor: pointer; }
 header #search span img.search { background-position: 0 0; height: 12px; width: 12px; }
 header a.social { float: right; padding: 2px 0; }
 header a.social .in { background-position: 0 -39px; height: 24px; width: 27px; }
@@ -27,17 +31,29 @@ section.baner .four > a > img { -webkit-border-radius: 10px 10px; -moz-border-ra
 section.baner .four > a > span { display: block; position: absolute; width: 100%; }
 section.baner .four > a > span.lock { top: 0px; height: 126px; background: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.4); -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px; border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px; border-top-left-radius: 10px; }
 section.baner .four > a > span.lock img { position: absolute; right: -10px; top: -8px; background-position: 0 -119px; height: 34px; width: 32px; }
-section.baner .four > a > span.title { font-weight: bold; font-size: 18px; padding: 4px 8px; color: white; bottom: 0px; height: 32px; background: #735179; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+section.baner .four > a > span.title { font-weight: bold; font-size: 14px; padding: 8px; color: white; bottom: 0px; height: 32px; background: #735179; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
 
 section.boxes a.game { display: block; position: relative; margin-bottom: 18px; }
 section.boxes a.game.hide .lock { background: rgba(255, 255, 255, 0.4); }
-section.boxes a.game > img { -webkit-border-radius: 10px 10px; -moz-border-radius: 10px / 10px; border-radius: 10px / 10px; -webkit-box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; -moz-box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; }
+section.boxes a.game > img { -webkit-border-radius: 10px 10px; -moz-border-radius: 10px / 10px; border-radius: 10px / 10px; -webkit-box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; -moz-box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.2) ; width: 220px; height: 140px; }
 section.boxes a.game > span { display: block; position: absolute; width: 100%; }
 section.boxes a.game > span.lock { top: 0px; height: 103px; background: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.4); -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px; border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px; border-top-left-radius: 10px; }
 section.boxes a.game > span.lock img { position: absolute; right: -8px; top: -6px; }
 section.boxes a.game > span.lock img.lock-red { background-position: 0 -87px; height: 32px; width: 27px; }
 section.boxes a.game > span.lock img.lock-grean { background-position: 0 -119px; height: 34px; width: 32px; }
-section.boxes a.game > span.title { font-weight: bold; font-size: 14px; padding: 10px 8px; color: white; bottom: 0px; height: 39px; background: #735179; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+section.boxes a.game > span.title { font-weight: bold; font-size: 12px; line-height: 16px; padding: 10px 10px; text-align: center; color: white; bottom: 0px; height: 39px; background: #72517f; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+section.boxes a.game > span.title.low { padding-top: 4px; }
+
+.blocked { border-top: 1.2px solid #b7b7b7; border-bottom: 1.2px solid white; background-color: #f4f4f4; position: relative; }
+.blocked h3 { margin: 0px; border-top: 1.2px solid white; padding-top: 10px; }
+.blocked h3 span { display: block; }
+.blocked section.boxes { padding-top: 10px; }
+.blocked .mask { width: 100%; height: 170px; position: absolute; top: 40px; background: rgba(244, 244, 244, 0.6); }
+
+footer { border-top: 1.2px solid #b7b7b7; background: white; padding-top: 10px; }
+footer b { margin: 4px 0; display: block; }
+footer .link-list li { margin-left: 12px; }
+footer .link-list li:first-child { margin-left: 22px; }
 
 .row.payu { width: 500px; min-width: 500px; max-width: 500px; }
 .row.payu .columns a { display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; border: 1px solid whitesmoke; background: whitesmoke; text-align: center; }
@@ -47,34 +63,3 @@ section.boxes a.game > span.title { font-weight: bold; font-size: 14px; padding:
 .row.payu h5.red { border: 1px solid #ec1616; background: #ec1616; }
 .row.payu h5.orange { border: 1px solid #f19c00; background: #f19c00; }
 .row.payu p { color: #7b588a; font-size: 24px; font-weight: bold; text-decoration: none; margin-bottom: 0; }
-
-#register { float: left; height: auto; overflow: hidden; padding: 10px; width: 365px; }
-#register .item { border-bottom: 1px solid #b9a2c1; display: block; height: 100px; margin: 0 10px; overflow: hidden; width: 490px; }
-#register .item .allPrice { color: black; float: left; height: 100%; padding-top: 30px; text-align: center; width: 70px; }
-#register .item .count { border-right: 1px solid #b9a2c1; float: left; height: 100%; padding-top: 30px; text-align: center; width: 40px; }
-#register .item .desc { border-right: 1px solid #b9a2c1; float: left; height: 100%; padding-top: 20px; width: 170px; }
-#register .item .desc a { color: #ff6600; font-size: 11px; margin: 5px 0; }
-#register .item .desc p { color: #666666; font-size: 11px; margin: 5px 0; }
-#register .item .price { border-right: 1px solid #b9a2c1; color: #666666; float: left; height: 100%; padding-top: 30px; text-align: center; width: 70px; }
-#register .item img { float: left; margin-right: 30px; margin-top: 10px; max-height: 80px; width: 100px; }
-#register h3 { margin: 25px 0 0 50px; }
-#register p { color: #666666; margin: 10px 5px; }
-#register ul { color: #666666; margin: 10px 0 10px 20px; width: 205px; }
-
-#sign { border-bottom: 1px solid #b9a2c1; display: block; height: auto; overflow: hidden; padding: 20px 0 0 0; }
-#sign .lostPass { margin: 5px 0 0 71px; }
-#sign .lostPass a { color: #ff6600; font-weight: 700; }
-#sign button { border: 0; cursor: pointer; margin: 5px 0 0 70px; }
-#sign h3 a { color: #ff6600; }
-
-#login.registerForm label span, #dane p span { color: #ff6600; }
-
-#sign h3, #dane h3 { color: #333333; font-size: 15px; margin: 0 10px 15px 0; }
-
-#login { border-right: 1px solid #b9a2c1; float: left; min-height: 190px; overflow: hidden; padding: 10px; width: 250px; }
-#login input { background: url(../../img/shop/input.png); border: 0; height: 19px; margin: 3px 0; padding: 2px 4px; width: 166px; }
-#login label { color: #666666; display: block; float: left; line-height: 29px; padding-right: 8px; text-align: left; width: 60px; }
-#login.registerForm { margin-left: 10px; width: 290px; }
-#login.registerForm label { width: 100px; }
-
-#basketContent .item .desc h3, #login p, #register .item .desc h3 { color: #666666; margin: 0; }

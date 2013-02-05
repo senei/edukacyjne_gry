@@ -22,34 +22,51 @@ body
 
 header
   width: 100%
-  height: 80px
-  background: transparent image-url('head-bg.png', false, true) center center repeat-x
-  color: white
-  div.logo
-    background: transparent image-url('bazgroszyt.pl-logo.png', false, true) left center no-repeat
-  h5
-    padding: 8px
-    float: right
-    font-size: 14px
-    font-weight: normal
-    color: white
-  a, a:focus, a:hover
-    float: left
-    color: white
-    font-size: 12px
-    line-height: 20px
-    padding: 4px
-    margin: 16px 0
-    img.lock
-      @include icon-sprite(lock-white)
-      height: icon-sprite-height(lock-white)
-      width: icon-sprite-width(lock-white)
-      position: relative
-      top: 3px
-    &.log
-      border-right: 1px solid rgba(57,57,57,0.2)
-    &.reg
-      border-left: 1px solid rgba(255,255,255,0.2)
+  .top-bar 
+    line-height: 30px
+    min-height: 40px
+    margin: 10px 0
+    background: $mainColor
+    @include border-radius(5px)
+
+    ul 
+      padding: 5px
+      line-height: 24px
+      height: 34px
+      a:not(.button)
+        line-height: 30px
+        height: 30px 
+        font-size: 12px
+        
+        text-transform: uppercase
+        border-right: 1px solid darken($mainColor, 10%)
+        border-left: 1px solid lighten($mainColor, 10%)
+        img.lock
+          @include icon-sprite(lock-white)
+          height: icon-sprite-height(lock-white)
+          width: icon-sprite-width(lock-white)
+          position: relative
+          top: 3px
+        &.log
+          border: none
+          border-right: 1px solid darken($mainColor, 10%)
+        &.reg
+          border: none
+          border-left: 1px solid lighten($mainColor, 10%)
+
+      & > li:not(.name):hover, & > li:not(.name).active
+        background: lighten($mainColor, 20%)
+        color: $mainColor
+        a
+          color: $mainColor
+          
+          
+      & > li:first-child a, & > li.active:first-child a
+        border-left: none
+      & > li:last-child a, & > li.active:last-child a
+        border-right: none
+    
+    
 
   #search
     position: relative
@@ -157,6 +174,8 @@ section.boxes
     & > img
       @include border-radius(10px, 10px)
       @include photoshop-drop-shadow()
+      width: 220px
+      height: 140px
     & > span
       display: block
       position: absolute
@@ -189,14 +208,46 @@ section.boxes
         color: white
         bottom: 0px
         height: 39px
-        background: rgba(115,81,121,1)
+        background: $mainColor
         border-top: 1px solid rgba(0,0,0, 0.2)
         @include border-bottom-right-radius(10px)
         @include border-bottom-left-radius(10px)
         &.low 
           padding-top: 4px
+.blocked 
+  border-top: 1.2px solid darken(#f4f4f4, 24%)
+  border-bottom: 1.2px solid lighten(#f4f4f4, 24%)
 
+  background-color: #f4f4f4
+  position: relative
+  
+  h3
+    margin: 0px
+    border-top: 1.2px solid lighten(#f4f4f4, 24%)
+    padding-top: 10px
+    span 
+      display: block
+  section.boxes
+    padding-top: 10px
+  .mask
+    width: 100%
+    height: 170px
+    position: absolute
+    top: 40px
+    background: adjust-color(#f4f4f4,$alpha: -0.4)
 
+footer
+  border-top: 1.2px solid darken(#f4f4f4, 24%)
+  background: #fff
+  padding-top: 10px
+  b
+    margin: 4px 0
+    display: block
+  .link-list li
+    margin-left: 12px
+    &:first-child
+      margin-left: 22px
+    
 .row.payu
   width: 500px
   min-width: 500px

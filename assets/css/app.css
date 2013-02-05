@@ -1,8 +1,10 @@
-.icon-sprite, header .top-bar ul a:not(.button) img.lock, header #search span img.search, header a.social .in, header a.social .gplus, header a.social .fb, section.baner .four > a > span.lock img, section.boxes a.game > span.lock img.lock-red, section.boxes a.game > span.lock img.lock-grean { background: url('../images/icon-se9a5cfd8ef.png') no-repeat; }
+.icon-sprite, header .top-bar ul a:not(.button) img.lock, header a.social .in, header a.social .gplus, header a.social .fb, section.baner .four > a > span.lock img, section.boxes a.game > span.lock img.lock-red, section.boxes a.game > span.lock img.lock-grean { background: url('../images/icon-se9a5cfd8ef.png') no-repeat; }
 
 body { background: transparent url('../images/bg_grid.gif?1358765219') center center repeat fixed; }
+body .row, body footer, body .blocked { min-width: 960px; }
 
 header { width: 100%; }
+header .row > img { padding: 4px; }
 header .top-bar { line-height: 30px; min-height: 40px; margin: 10px 0; background: #72517f; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 header .top-bar ul { padding: 5px; line-height: 24px; height: 34px; }
 header .top-bar ul a:not(.button) { line-height: 30px; height: 30px; font-size: 12px; text-transform: uppercase; border-right: 1px solid #563d60; border-left: 1px solid #8e669d; }
@@ -13,10 +15,6 @@ header .top-bar ul > li:not(.name):hover, header .top-bar ul > li:not(.name).act
 header .top-bar ul > li:not(.name):hover a, header .top-bar ul > li:not(.name).active a { color: #72517f; }
 header .top-bar ul > li:first-child a, header .top-bar ul > li.active:first-child a { border-left: none; }
 header .top-bar ul > li:last-child a, header .top-bar ul > li.active:last-child a { border-right: none; }
-header #search { position: relative; padding: 16px 2px; width: 185px; height: 60px; float: left; }
-header #search input { border-radius: 8px; background: rgba(102, 51, 102, 0.4); border-color: #663366; color: rgba(255, 255, 255, 0.6); height: 30px; }
-header #search span { -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; border-bottom-right-radius: 8px; background: rgba(102, 51, 102, 0.6); border-color: #663366; width: 20%; height: 30px; position: absolute; top: 16px; cursor: pointer; }
-header #search span img.search { background-position: 0 0; height: 12px; width: 12px; }
 header a.social { float: right; padding: 2px 0; }
 header a.social .in { background-position: 0 -39px; height: 24px; width: 27px; }
 header a.social .gplus { background-position: 0 -15px; height: 24px; width: 27px; }
@@ -41,7 +39,7 @@ section.boxes a.game > span.lock { top: 0px; height: 103px; background: transpar
 section.boxes a.game > span.lock img { position: absolute; right: -8px; top: -6px; }
 section.boxes a.game > span.lock img.lock-red { background-position: 0 -87px; height: 32px; width: 27px; }
 section.boxes a.game > span.lock img.lock-grean { background-position: 0 -119px; height: 34px; width: 32px; }
-section.boxes a.game > span.title { font-weight: bold; font-size: 12px; line-height: 16px; padding: 10px 10px; text-align: center; color: white; bottom: 0px; height: 39px; background: #72517f; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
+section.boxes a.game > span.title { font-weight: bold; font-size: 14px; line-height: 16px; padding: 10px 10px; text-align: center; color: white; bottom: 0px; height: 39px; background: #72517f; border-top: 1px solid rgba(0, 0, 0, 0.2); -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px; }
 section.boxes a.game > span.title.low { padding-top: 4px; }
 
 .blocked { border-top: 1.2px solid #b7b7b7; border-bottom: 1.2px solid white; background-color: #f4f4f4; position: relative; }

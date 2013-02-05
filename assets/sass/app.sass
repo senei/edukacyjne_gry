@@ -19,9 +19,12 @@ $icon-layout: smart
 
 body
   background: transparent image-url('bg_grid.gif', false, true) center center repeat fixed
-
+  .row, footer, .blocked
+    min-width: 960px
 header
   width: 100%
+  .row > img
+    padding: 4px
   .top-bar 
     line-height: 30px
     min-height: 40px
@@ -67,33 +70,6 @@ header
         border-right: none
     
     
-
-  #search
-    position: relative
-    padding: 16px 2px 
-    width: 185px
-    height: 60px
-    float: left
-    input
-      border-radius: 8px
-      background: rgba(102,51,102,0.4)
-      border-color: #663366
-      color: rgba(255,255,255,0.6)
-      height: 30px
-    span
-      @include border-top-right-radius(8px)
-      @include border-bottom-right-radius(8px)
-      background: rgba(102,51,102,0.6)
-      border-color: #663366
-      width: 20%
-      height: 30px
-      position: absolute
-      top: 16px
-      cursor: pointer
-      img.search
-        @include icon-sprite(search)
-        height: icon-sprite-height(search)
-        width: icon-sprite-width(search)
         
   a.social 
     float: right
@@ -201,7 +177,7 @@ section.boxes
             width: icon-sprite-width(lock-grean)
       &.title
         font-weight: bold
-        font-size: 12px
+        font-size: 14px
         line-height: 16px
         padding: 10px 10px
         text-align: center
